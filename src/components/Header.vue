@@ -4,11 +4,16 @@
       <v-toolbar-title class="white--text">
       </v-toolbar-title>
       <v-toolbar-items >
-        <v-btn text>Entertainment</v-btn>
-        <v-btn text>Sports</v-btn>
-        <v-btn text>Weather</v-btn>
-        <v-btn text>Food</v-btn>
-        <v-btn text>Opinion</v-btn>
+      <v-btn
+        v-for="link in links"
+        :key="link"
+        color="white"
+        text
+        rounded
+        class="my-2"
+      >
+        {{ link }}
+      </v-btn>
 
                 <!-- <v-text-field
           solo
@@ -49,6 +54,15 @@ export default {
   props: {
 
   },
+      data: () => ({
+      links: [
+        'Home',
+        'About Us',
+        'Entertainment',
+        'Sports',
+        'Community',
+      ],
+    }),
 };
 </script>
 
