@@ -11,12 +11,11 @@
       justify="center"
       no-gutters
     >
-    <!-- <v-col cols="1"></v-col> -->
+
     <v-col cols="3">
 
-    <div class="underline">Sections</div>
-<!-- <div class="pa-2"></div> -->
-    <!-- <div class="links"> -->
+    <div class="underline" style="margin-bottom: 10px">Sections</div>
+
       <div class="footerText">Home</div>
         <div class="footerText">About Us</div>
       <div class="footerText">Sports</div>
@@ -39,16 +38,16 @@
         <v-col cols="1"></v-col>
     </v-col>
     <v-col cols="3">
-      <div class="underline">Services</div>
+      <div class="underline" style="margin-bottom: 10px">Services</div>
         <div class="footerText">Subscribe</div>
       <div class="footerText">Classifieds</div>
         <div class="footerText">Ad Space</div>
           <div class="footerText">Community</div>
             <div class="footerText">Calendar</div>
     </v-col>
-    <!-- <v-col cols="1"></v-col> -->
+
         <v-col cols="3">
-   <div class="underline">Contact Us</div>
+   <div class="underline" style="margin-bottom: 10px">Contact Us</div>
 
    <div class="footerText">The Advocate</div>
    <div class="footerText">123 Main St</div>
@@ -58,7 +57,7 @@
  </v-col>
  <v-col cols="3">
    
-   <div class="underline">Follow Us</div>
+   <div class="underline" style="margin-bottom: 10px">Follow Us</div>
    <v-row>
      <v-col cols="3"></v-col>
 <v-col cols="2">
@@ -76,7 +75,7 @@
    </v-row>
          
     </v-col>
-        <!-- <v-col cols="1"></v-col> -->
+
       </v-row>
       <v-row       
 
@@ -100,15 +99,6 @@
 <script>
   export default {
     data: () => ({
-
-      // links: [
-      //   'Home',
-      //   'About Us',
-      //   'Entertainment',
-      //   'Sports',
-      //   'Community',
-      //   'Contact Us',
-      // ],
     }),
   }
 </script>
@@ -130,10 +120,6 @@
   font-size: 14px;
   /* margin: 1px; */
 }
- /* .v-btn {
- padding: 0;
- min-width: 0;
- margin: -10px;
- } */
+
 
 </style>

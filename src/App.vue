@@ -2,13 +2,17 @@
   <v-container id="app">
     <Header />
     <v-row>
-       <v-col md="3">
-        
+       <v-col md="2">
+         <h6 style="margin-top: 10px">{{date}}</h6>
        </v-col>
  <v-col md="6">
- 
-    <h1>The Advocate</h1>
+    <h1 style="margin-bottom: -30px; margin-left: 70px">The Advocate</h1>
  </v-col>
+
+    <v-col class="weather">
+
+   <Weather />
+   </v-col>
   <v-col md="3"></v-col>
     </v-row>
     <v-row>
@@ -17,7 +21,7 @@
        </v-col>
  <v-col md="6">
  
-    <h6>06/15/2021</h6>
+    <!-- <h6 style="margin-top: -40px">{{date}}</h6> -->
  </v-col>
   <v-col md="3"></v-col>
     </v-row>
@@ -32,12 +36,12 @@
     <li v-for="(item) in childData" :key="item.id">{{item.title}}</li>
     <li>meep</li>
     </ul> -->
-    <Newsfeed v-on:passData="getData($event)"/>
+    <Newsfeed v-on:passData="getData($event)" />
     <v-row>
  <v-col cols="2"></v-col>
     <v-col cols="8"> 
 
-    <Carousel v-bind:images="topStories"/>
+    <Carousel v-bind:images="topStories" style="margin-top: -20px"/>
     </v-col>
     
     <v-col cols="2"></v-col>
@@ -70,8 +74,15 @@
     </v-row>  
           <v-spacer class="ma-1"></v-spacer>
     <v-spacer class="ma-1"></v-spacer>
-   
-        
+
+   <v-row>
+     <!-- <v-col cols="1"></v-col> -->
+<v-col style="margin-top: 10px">
+
+       <Weekend /> 
+</v-col>
+<!-- <v-col cols="1"></v-col> -->
+   </v-row>
 <br>
 <br>
   <Footer />
@@ -83,11 +94,16 @@
 <script>
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Weather from "./components/Weather";
+import Weekend from "./components/Weekend";
 import Newsfeed from "./components/Newsfeed";
 import Carousel from "./components/Carousel";
 import ArticleOne from "./components/ArticleOne";
 import ArticleTwo from "./components/ArticleTwo";
 import ArticleThree from "./components/ArticleThree";
+
+var today = new Date();
+
 
 export default {
   name: "App",
@@ -98,12 +114,16 @@ export default {
     Carousel,
     ArticleOne,
     ArticleTwo,
-    ArticleThree
+    ArticleThree,
+    Weather,
+    Weekend
   },
   data(){
     return{
     childData: {},
-    topStories: []
+    topStories: [],
+    today: today,
+    date: this.curday('-')
     }
   },
   methods: {
@@ -113,7 +133,18 @@ export default {
       console.log("are we doing it right", this.childData)
       this.topStories.push(this.childData[2], this.childData[3], this.childData[4], this.childData[5])
     },
-  
+  curday: function(sp){
+// var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //As January is 0.
+var yyyy = today.getFullYear();
+
+if(dd<10) dd='0'+dd;
+if(mm<10) mm='0'+mm;
+return (mm+sp+dd+sp+yyyy);
+}
+
+
   }
 
   
@@ -146,4 +177,9 @@ hr2 {
     color: #333; /* old IE */
     background-color: #333; /* Modern Browsers */
 }
+.weather {
+padding-top: 30px;
+}
+
+
 </style>
