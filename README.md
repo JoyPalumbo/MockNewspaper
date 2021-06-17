@@ -3,8 +3,9 @@
 ## Project setup
 ```
 npm install
-```
 
+then cd into advocate folder
+```
 ### Compiles and hot-reloads for development
 ```
 npm run serve
