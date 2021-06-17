@@ -16,7 +16,7 @@ Weekend Activities
         <h6>
           Interactive, multi-media art exhibit
     </h6>
-    <!-- <br> -->
+
     <img src="../assets/advocate.jpeg" class="photos" alt="art">
   </v-col>
   <v-col>
