@@ -14,17 +14,6 @@
       >
         {{ link }}
       </v-btn>
-
-                <!-- <v-text-field
-          solo
-          placeholder="Search"
-          single-line
-          append-icon="search"
-          background-color="#202d3f"
-          color="white"
-          hide-details
-  
-        ></v-text-field> -->
       </v-toolbar-items>
 
       <v-spacer></v-spacer>
@@ -42,9 +31,6 @@
         ></v-text-field>
       </v-layout>
     </v-toolbar>
-    <!-- <div>
-      <h1>The Advocate</h1>
-    </div> -->
   </v-app-bar>
 </template>
 

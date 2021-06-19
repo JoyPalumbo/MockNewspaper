@@ -1,7 +1,4 @@
 <template>
-<!-- <v-flex xs12> -->
-
-
   <v-carousel hide-delimiters cycle height="300" width="200"  :show-arrows="false">
     <v-carousel-item
       v-for="(image,i) in images"
@@ -9,23 +6,10 @@
       :src="image.urlToImage"
     > 
      <div class="title">{{image.title}}</div>
-      <!-- <v-sheet
-        tile
-      > -->
-        <!-- <v-row
-          class="d-flex align-end mb-6"
-
-        > -->
-          <!-- <div class="text-h2">
-            {{image.title}}
-          </div> -->
-        <!-- </v-row> -->
-      <!-- </v-sheet> -->
           </v-carousel-item>
 
 
   </v-carousel>
-<!-- </v-flex> -->
 </template>
 
 <script>

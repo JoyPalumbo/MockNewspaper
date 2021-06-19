@@ -21,7 +21,7 @@
       <div class="footerText">Sports</div>
         <div class="footerText">Entertainment</div>
           <div class="footerText">Calendar</div>
-  
+
       <!-- <v-btn
         v-for="link in links"
         :key="link"

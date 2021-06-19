@@ -6,7 +6,6 @@
 <h5 sm8>
   {{article[6].title}}
 </h5>
-<!-- <h6 sm2>{{article[12].description}}</h6> -->
 
 </div>
 </template>

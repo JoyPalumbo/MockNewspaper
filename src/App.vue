@@ -20,22 +20,9 @@
         
        </v-col>
  <v-col md="6">
- 
-    <!-- <h6 style="margin-top: -40px">{{date}}</h6> -->
  </v-col>
   <v-col md="3"></v-col>
     </v-row>
-    <!-- <v-divider class="hr"></v-divider>
-    <v-spacer class="ma-1"></v-spacer>
- <v-divider class="hr2"></v-divider> -->
-<!-- <v-spacer class="ma-1"></v-spacer> -->
-
-
-    <!-- <ul>
-
-    <li v-for="(item) in childData" :key="item.id">{{item.title}}</li>
-    <li>meep</li>
-    </ul> -->
     <Newsfeed v-on:passData="getData($event)" />
     <v-row>
  <v-col cols="2"></v-col>
@@ -46,42 +33,33 @@
     
     <v-col cols="2"></v-col>
     </v-row>
-    <!-- <h1>{{childData[0].title}}</h1> -->
     <v-spacer class="ma-1"></v-spacer>
     <v-spacer class="ma-1"></v-spacer>
     <br>
     <br>
-    <!-- <v-divider class="hr2"></v-divider> -->
     
     <v-row> 
-       
-      <!-- <v-divider vertical></v-divider> -->
            
       <v-col cols="4">
         <ArticleOne v-bind:article="childData"/>
       </v-col>
-    <!-- <v-divider vertical></v-divider> -->
     <v-col cols="4">
 
     <ArticleTwo v-bind:article="childData"/>
 </v-col>
-<!-- <v-divider vertical></v-divider> -->
     <v-col cols="4">
 
     <ArticleThree v-bind:article="childData"/>
 </v-col>
-<!-- <v-divider vertical></v-divider> -->
     </v-row>  
           <v-spacer class="ma-1"></v-spacer>
     <v-spacer class="ma-1"></v-spacer>
 
    <v-row>
-     <!-- <v-col cols="1"></v-col> -->
 <v-col style="margin-top: 10px">
 
        <Weekend /> 
 </v-col>
-<!-- <v-col cols="1"></v-col> -->
    </v-row>
 <br>
 <br>

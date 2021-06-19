@@ -2,9 +2,8 @@
 
 ## Project setup
 ```
-npm install
-
-then cd into advocate folder
+cd into advocate folder
+the run npm install
 ```
 ### Compiles and hot-reloads for development
 ```
